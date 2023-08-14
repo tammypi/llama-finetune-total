@@ -156,12 +156,12 @@ def main(
 
 运行效果如下：
 
-![image-20230814173542996](.\image\1.png)
+![image-20230814173542996]([.\image\1.png](https://github.com/tammypi/llama-finetune-total/blob/main/image/1.png?raw=true))
 
-![image-20230814173729758](.\image\2.png)
+![image-20230814173729758]([.\image\2.png](https://github.com/tammypi/llama-finetune-total/blob/main/image/2.png?raw=true>))
 
 可以回答中文问题了，只是回答存在中断的现象，也存在部分胡言乱语。待进一步研究。
 
 微调前后的效果对比：
 
-![3](.\image\3.png)
+![3]([.\image\3.png](https://github.com/tammypi/llama-finetune-total/blob/main/image/3.png?raw=true)
