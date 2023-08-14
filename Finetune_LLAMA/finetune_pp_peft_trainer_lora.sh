@@ -1,0 +1,21 @@
+export CUDA_VISIBLE_DEVICES=0
+torchrun --nproc_per_node=1 finetune_pp_peft_trainer_lora.py \
+    --model_path /root/autodl-tmp/models \
+    --Train_dataset_path /root/autodl-tmp/UMLSE_TOKENIZED\
+    --bf16 True \
+    --output_dir /root/autodl-tmp/Fine_Tuning_Results/PMCandMedMCQA_Lora \
+    --num_train_epochs 3 \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 4 \
+    --gradient_accumulation_steps 8 \
+    --evaluation_strategy "no" \
+    --save_strategy "steps" \
+    --save_steps 2000 \
+    --save_total_limit 1 \
+    --learning_rate 2e-5 \
+    --weight_decay 0. \
+    --warmup_ratio 0.03 \
+    --lr_scheduler_type "cosine" \
+    --deepspeed ./configs/ds_config_zero2.json\
+    --logging_steps 1 \
+    --tf32 True
